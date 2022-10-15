@@ -5,19 +5,14 @@
  */
 
 int main(void)
-	char h;
-	char a;
-	h = 'a';
-	a = 'A';
-	while (h <= 'z') 
 {
-		putchar (h);
-		h++;
-		while (a <= 'z') 
-		{
-			putchar (d);
-			a++;
-		}
-		putchar ('\n');
-		return (0);
-	}
+char i;
+for (i = 'a'; i <= 'z'; i++)
+{
+if (i == 'e' || i == 'q')
+continue;
+putchar(i);
+}
+putchar('\n');
+return (0);
+}
