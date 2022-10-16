@@ -1,12 +1,12 @@
 #include <stdio.h>
 /**
- * main - Entry point
- * Return: 0 
+ * main - entry point
+ * Return: 0 (success)
  */
 int main(void)
 {
 char i;
-for (i = 0; i <= '9'; i++)
+for (i = '0'; i <= '9'; i++)
 {
 putchar(i);
 }
