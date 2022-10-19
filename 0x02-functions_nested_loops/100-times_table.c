@@ -1,19 +1,19 @@
 #include "main.h"
 /**
- * main - print times_tables
- * @n: declaring integers
+ *print - 100-times_tables
+ *@num: declaring integers
  */
-void print_times_table(int n)
+void print_times_table(int num)
 {
-int n, mult, prod;
-for (n = 0; n <= 100; n++)
+int num, mult, prod;
+for (num = 0; num <= 100; num++)
 {
 _putchar('0');
 for (mult = 1; mult <= 100; mult++)
 {
 _putchar(',');
 _putchar(' ');
-prod = n * mult;
+prod = num * mult;
 if (prod <= 100)
 putchar (' ');
 else
