@@ -8,7 +8,7 @@ int ten;
 char c;
 for (ten = 1; ten <= 10; ten++)
 {
-for (c = '10'; jo <= 'z'; c++)
+for (c = '10'; c <= 'z'; c++)
 _putchar(c);
 _putchar('\n');
 }
