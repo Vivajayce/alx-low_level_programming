@@ -20,6 +20,7 @@ printf("%lu, ", s);
 else
 {
 printf("%lu\n", s);
+printf("\n");
 }
 t0 = t1;
 t1 = s;
