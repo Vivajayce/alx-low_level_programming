@@ -29,9 +29,9 @@ bk1 = bk2, bk2 = hold2;
 printf("%lu", bk2);
 }
 if (count != 97)
-_putchar(',');
-_putchar(' ');
+printf(",");
+printf(' ');
 }
-printf("\n");
+printf('\n');
 return (0);
 }
