@@ -1,25 +1,45 @@
 #include "main.h"
 /**
- *print - 100-times_tables
- *@num: declaring integers
+ * print_times_table - Print the `n` times table, starting with 0 Description: If `n` is greater than 15 or less than 0, print nothing.
+ * @n: int type number
  */
-void print_times_table(int num)
+void print_times_table(int n)
 {
-int num, mult, prod;
-for (num = 0; num <= 100; num++)
+int x = 0, y, z;
+if (n > 15 || n < 0)
+return;
+while (x <= n)
 {
-_putchar('0');
-for (mult = 1; mult <= 100; mult++)
+for (y = 0; y <= n; y++)
+{
+z = x * y;
+if (z > 99)
+{
+_putchar(z / 100 + '0');
+_putchar((z / 10 % 10) + '0');
+_putchar(z % 10 + '0');
+}
+else if (z > 9)
+{
+_putchar(' ');
+_putchar(z / 10 + '0');
+_putchar(z % 10 + '0');
+}
+else if (y != 0)
+{
+_putchar(' ');
+_putchar(' ');
+_putchar(z + '0');
+}
+else
+_putchar(z + '0');
+if (y != n)
 {
 _putchar(',');
 _putchar(' ');
-prod = num * mult;
-if (prod <= 100)
-putchar (' ');
-else
-_putchar((prod / 10) + '0');
-_putchar((prod % 10) + '0');
+}
 }
 _putchar('\n');
+x++;
 }
 }
