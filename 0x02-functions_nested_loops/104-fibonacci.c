@@ -30,6 +30,7 @@ printf("%lu", bk2);
 }
 if (count != 97)
 printf(",");
+printf(' ');
 }
 printf("\n");
 return (0);
