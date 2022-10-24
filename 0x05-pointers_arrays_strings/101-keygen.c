@@ -1,7 +1,10 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+/**
+ * _keygen - generates valid passwords
+ * Return: 0
+ */
 int main(void)
 {
 int myrand;
