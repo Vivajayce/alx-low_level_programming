@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_array - print `n` elements of an array of integers
+ * print_array - print n elements of an array of integers
  * @a: array
  * @n: number of arrays to be printed
  */
@@ -12,7 +12,7 @@ for (t = 0; t < n; t++)
 {
 printf("%d", a[t]);
 if (t != n - 1)
-printf(",");
+printf(", ");
 }
 printf("\n");
 }
