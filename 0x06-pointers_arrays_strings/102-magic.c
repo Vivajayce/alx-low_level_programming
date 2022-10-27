@@ -7,9 +7,8 @@ int a[5];
 int *p;
 
 a[2] = 1024;
-p = &n;
+p = 98;
 /*
- * _magic - prints same code as written in the line statement
  * write your line of code here...
  *
  * Remember:
