@@ -6,15 +6,18 @@
  */
 char *rot13(char *s)
 {
-int i;
-char storeh[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
-char storel[] = "nopqrstuvwxyzabcdefghijklm";
-for (i = 0; s[i] != '\0'; i++)
+int x, y;
+char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+for (x = 0; s[x] != '\0'; x++)
 {
-if ((s[i] > 64 && s[i] < 91) || (s[i] > 96 && s[i] < 123))
+for (y = 0; input[y] != '\0'; y++)
 {
-s[i] = (s[i] - 65 > 25);
-storel[s[i] - 97] : storeh[s[i] - 65];
+if (s[x] == input[y])
+{
+s[x] = output[y];
+break;
+}
 }
 }
 return (s);
