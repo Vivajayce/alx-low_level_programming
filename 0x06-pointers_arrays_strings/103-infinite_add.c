@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * add_strings - add the number stored in two strings
+ * infinite_add - add the number stored in two strings
  * @n1: contains strings to be added first
  * @n2: contains strings to be added second
  * @r: buffer to store the result
