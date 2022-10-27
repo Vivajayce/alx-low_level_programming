@@ -13,7 +13,7 @@ power = 1;
 hold = n;
 if (n < 0)
 {
-_putchar(',');
+_putchar('-');
 neg = 1;
 }
 while (hold > 9 || hold < -9)
