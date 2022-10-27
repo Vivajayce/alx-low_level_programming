@@ -14,11 +14,11 @@ printf("%08x: ", byte);
 for (index = 0; index < 10; index++)
 {
 if ((index + byte) >= size)
-printf(" ");
+printf("  ");
 else
 printf("%02x", *(b + index + byte));
 if ((index % 2) != 0 && index != 0)
-printf(" ");
+printf("  ");
 }
 for (index = 0; index < 10; index++)
 {
@@ -27,7 +27,7 @@ break;
 else if (*(b + index + byte) >= 31 && *(b + index + byte) <= 126)
 printf("%c", *(b + index + byte));
 else
-printf(".");
+printf(" . ");
 }
 if (byte >= size)
 continue;
