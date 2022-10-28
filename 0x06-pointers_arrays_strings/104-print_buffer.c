@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * print_buffer - prints a buffer 10 bytes at a time starting with the byte position of the content
  * @b: the buffer to be printed
