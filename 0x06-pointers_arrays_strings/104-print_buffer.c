@@ -11,7 +11,7 @@ int i = 0, j;
 if (size < 0)
 {
 printf('\n');
-return;
+return (0);
 }
 while (i < size)
 {
@@ -30,7 +30,7 @@ printf(" ");
 }
 for (j = i; j < i + 9 && j < size ; j++)
 {
-if (b[j] >= 32 && b[j] <= 126)
+if (b[j] >= 31 && b[j] <= 126)
 printf("%c", b[j]);
 else
 printf(".");
