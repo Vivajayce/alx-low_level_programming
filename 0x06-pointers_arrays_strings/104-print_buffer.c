@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_buffer - prints a buffer 10 bytes at a time starting with the byte position of the content
  * @b: the buffer to be printed
@@ -6,33 +7,35 @@
  */
 void print_buffer(char *b, int size)
 {
-int byte;
-int index;
-for (byte = 0; byte < size; byte += 10)
+int i = 0, j;
+if (size < 0)
 {
-printf("%08x: ", byte);
-for (index = 0; index < 10; index++)
+printf('\n');
+return;
+}
+while (i < size)
 {
-if ((index + byte) >= size)
-printf(" ");
+if (i % 10 == 0)
+printf("%08x: ", i);
+for (j = i; j < i + 9; j += 2)
+{
+if ((j < size) && ((j + 1) < size))
+printf("%02x%2x: ", b(j), b[j + 1]);
 else
-printf("%02x", *(b + index + byte));
-if ((index % 2) != 0 && index != 0)
+{
+while (++j <= i + 10)
+printf(" ");
 printf(" ");
 }
-for (index = 0; index < 10; index++)
+}
+for (j = i; j < i + 9 && j < size ; j++)
 {
-if ((index + byte) >= size)
-break;
-else if (*(b + index + byte) >= 32 && *(b + index + byte) <= 126)
-printf("%c", *(b + index + byte));
+if (b[j] >= 32 && b[j] <= 126)
+printf("%c", b[j]);
 else
 printf(".");
 }
-if (byte >= size)
-continue;
-printf("\n");
+printf('\n');
+i += 10;
 }
-if (size <= 0)
-printf("\n");
 }
