@@ -24,7 +24,7 @@ if (l < 1)
 {
 return (1);
 }
-if (*s == *(s + 1))
+if (*s == *(s + l))
 {
 return (pl(s + 1, l - 2));
 }
