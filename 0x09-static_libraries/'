@@ -1,0 +1,16 @@
+#include "main.h"
+
+/**
+ *
+ *  * _strspn - search a string for a set of byte
+ *
+ *   * @s: char string array
+ *
+ *    * @accept: chararray to check bytes with
+ *
+ *     * Return: number of bytes in the initial segment
+ *
+ *      */
+
+unsigned int _strspn(char *s, char *accept)
+{
