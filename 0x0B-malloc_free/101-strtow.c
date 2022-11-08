@@ -58,6 +58,7 @@ string = malloc(sizeof(char *) * (words + 1));
 if (string == NULL)
 return (NULL);
 for (w = 0; w < words; w++)
+{
 while (str[index] == ' ')
 index++;
 letters = word_len(str + index);
@@ -67,6 +68,7 @@ if (string[w] == NULL)
 for (; w >= 0; w--)
 free(string[w]);
 free(string);
+}
 return (NULL);
 for (l = 0; l < letters; l++)
 string[w][l] = str[index++];
