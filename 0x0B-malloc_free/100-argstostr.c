@@ -1,9 +1,11 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stddef.h>
 /**
- * argstostr - concatenate all arguments of your program with newline
- * @ac: argument count
- * @av: double pointer to array of strings passed to main
- * Return: Null if fail, else return pointer to new string
+ * argstostr - prints arg
+ * @ac: takes in width of grid
+ * @av: height of grid
+ * Return: the args one line at a time
  */
 char *argstostr(int ac, char **av)
 {
