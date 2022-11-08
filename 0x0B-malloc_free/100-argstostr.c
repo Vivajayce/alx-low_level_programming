@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
 /**
  * argstostr - concatenate all arguments of your program with newline
  * @ac: argument count
@@ -9,30 +7,35 @@
  */
 char *argstostr(int ac, char **av)
 {
-char *a, *retp;
-int i, j, total;
+char *str;
+int count = 0, a = 0, b = 0, c = 0;
 if (ac == 0 || av == NULL)
 return (NULL);
-for (i = 0, total = 0; i < ac; i++)
+while (a < ac)
 {
-for (j = 0; *(*(av + i) + j) != '\0'; j++, total++)
-;
-total++;
+b = 0;
+while (av[a][b] != '\0')
+{
+count++;
+b++;
 }
-total++;
-a = malloc(total * sizeof(char));
-if (a == NULL)
+a++;
+}
+count = count + ac + 1;
+str = malloc(sizeof(char) * count);
+if (str == NULL)
+{
 return (NULL);
-retp = a;
-for (i = 0; i < ac; i++)
-{
-for (j = 0; av[i][j] != '\0'; j++)
-{
-*a = av[i][j];
-a++;
 }
-*a = '\n';
-a++;
+for (a = 0; a < ac; a++)
+{
+for (b = 0; av[a][b] != '\0'; b++)
+{
+str[c] = av[a][b];
+c++;
 }
-return (retp);
+str[c] = '\n';
+c++;
+}
+return (str);
 }
