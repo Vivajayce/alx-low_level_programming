@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * string_nconcat - concatenates two strings
  * @s1: first string
@@ -29,6 +30,7 @@ p[i] = s2[c++];
 p[i] = '\0';
 return (p);
 }
+
 /**
  * _strlen - find length of string
  * @s: string
