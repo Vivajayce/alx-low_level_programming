@@ -1,5 +1,5 @@
 #include "variadic_functions.h"
-#include <stdlib.h>
+#include <stdarg.h>
 #include <stdio.h>
 /**
  * _printchar - print char type element from va_list
