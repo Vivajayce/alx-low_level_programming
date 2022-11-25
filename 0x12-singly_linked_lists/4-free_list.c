@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * free_list - free a `list_t` list
- * @head: head of linked list
+ * @head: a pointer to the list_t list
  */
 void free_list(list_t *head)
 {
