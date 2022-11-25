@@ -6,14 +6,11 @@
  */
 size_t list_len(const list_t *h)
 {
-size_t list_len(const list_t *h)
-size_t c;
-c = 0;
-current = h;
-while (current != NULL)
+size_t elements = 0;
+while (h)
 {
-current = current->next;
-c++;
+elements++;
+h = h->next;
 }
-return (c);
+return (elements);
 }
