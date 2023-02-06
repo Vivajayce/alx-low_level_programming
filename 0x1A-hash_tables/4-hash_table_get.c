@@ -8,6 +8,7 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 unsigned long int idx, hash_val;
+
 if (ht == NULL)
 return (NULL);
 hash_val = hash_djb2((unsigned char *)key);
