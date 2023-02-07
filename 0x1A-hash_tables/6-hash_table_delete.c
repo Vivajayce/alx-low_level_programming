@@ -1,22 +1,29 @@
 #include "hash_tables.h"
 /**
- * hash_table_delete - Deleting and properly
- * freeing all memory of the hash table.
- * @ht: The hash table to be freed.
+ * hash_table_delete - delete given hash table
+ * @ht: hash table given
  */
 void hash_table_delete(hash_table_t *ht)
 {
-hash_node_t *friend, *free_kv;
-for (i = 0; i < ht->size; i++)
+hash_node_t *tmp, *prev;
+unsigned long int sz, i;
+if (ht == NULL)
+return;
+if (ht->array == NULL)
 {
-friend = ht->array[i];
-while (friend != NULL)
+free(ht);
+return;
+}
+for (i = 0, sz = ht->size; i < sz; i++)
 {
-free_kv = friend;
-friend = friend->next;
-free(free_kv->key);
-free(free_kv->value);
-free(free_kv);
+tmp = ht->array[i];
+while (tmp)
+{
+prev = tmp;
+tmp = tmp->next;
+free(prev->key);
+free(prev->value);
+free(prev);
 }
 }
 free(ht->array);
